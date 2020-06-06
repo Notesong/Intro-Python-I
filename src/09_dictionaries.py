@@ -49,4 +49,5 @@ waypoints[0].update({'lon': -130})
 # Write a loop that prints out all the field values for all the waypoints
 # YOUR CODE HERE
 for e in waypoints:
-    print(e)
+    for value in e.values():
+        print(value)

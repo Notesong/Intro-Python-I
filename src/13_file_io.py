@@ -3,6 +3,7 @@ Python makes performing file I/O simple. Take a look
 at how to read and write to files here:
 
 https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
+https://www.guru99.com/reading-and-writing-files-in-python.html
 """
 
 # Open up the "foo.txt" file (which already exists) for reading
@@ -10,6 +11,11 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Note: pay close attention to your current directory when trying to open "foo.txt"
 
 # YOUR CODE HERE
+with open('foo.txt', "r") as f:
+    read_data = f.read()
+    for line in read_data:
+        print(line, end='')
+
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
@@ -17,3 +23,7 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
+with open("bar.txt", "w") as f:
+    f.write("Hello, world!\n")
+    f.write("This is Python3.\n")
+    f.write("Take care!")

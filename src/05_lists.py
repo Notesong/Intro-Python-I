@@ -13,6 +13,7 @@ print(x)
 
 # Using y, change x so that it is [1, 2, 3, 4, 8, 9, 10]
 # YOUR CODE HERE
+# x.extend(y)
 for e in y:
     x.append(e)
 print(x)
