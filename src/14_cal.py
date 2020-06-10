@@ -30,3 +30,21 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+
+def draw_calendar(month, year):
+    # use the TextCalendar class to create the calendar
+    new_calendar_instance = calendar.TextCalendar()
+    # set the calendar's month and year
+    adjusted_calendar = new_calendar_instance.formatmonth(
+        int(year), int(month))
+    print(adjusted_calendar)
+
+
+# draw calendar with argvs if there are at least 2 arguments
+if len(sys.argv) > 2:
+    draw_calendar(sys.argv[1], sys.argv[2])
+# if no argvs, draw calendar based on current month and year
+else:
+    t = datetime.today()
+    draw_calendar(t.month, t.year)
